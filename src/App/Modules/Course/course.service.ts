@@ -13,7 +13,20 @@ const deleteCourse = async (courseId: string) => {
   return deletedCourse;
 };
 
+//get all courses
+const getAllCourses = async () => {
+  const courses = await CourseModel.find();
+  return courses;
+};
+
+//get single course
+const getCourseById = async (courseId: string) => {
+  const course = await CourseModel.findById(courseId);
+  return course;
+};
 export const CourseService = {
   createCourse,
   deleteCourse,
+  getAllCourses,
+  getCourseById,
 };

@@ -25,7 +25,30 @@ const deleteCourse = async (req: Request, res: Response) => {
   });
 };
 
+//get all courses
+const getAllCourses = async (req: Request, res: Response) => {
+  const courses = await CourseService.getAllCourses();
+  res.status(200).json({
+    success: true,
+    message: "Courses fetched successfully",
+    courses,
+  });
+};
+
+//get single course
+const getCourseById = async (req: Request, res: Response) => {
+  const { courseId } = req.params;
+  const course = await CourseService.getCourseById(courseId);
+  res.status(200).json({
+    success: true,
+    message: "Course fetched successfully",
+    course,
+  });
+};
+
 export const CourseController = {
   createCourse,
   deleteCourse,
+  getAllCourses,
+  getCourseById,
 };

@@ -9,5 +9,7 @@ router.delete(
   auth("admin"),
   CourseController.deleteCourse
 );
+router.get("/all-courses", CourseController.getAllCourses);
+router.get("/single-course/:courseId", CourseController.getCourseById);
 
 export const courseRouter = router;

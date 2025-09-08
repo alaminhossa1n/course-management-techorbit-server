@@ -38,6 +38,7 @@ const signIn = async (user: TUserSignIn) => {
   const jwtPayload = {
     _id: existingUser?._id,
     email: existingUser?.email,
+    role: existingUser?.role,
   };
 
   const accessToken = jwt.sign(jwtPayload, process.env.JWT_SECRET as string, {

@@ -7,4 +7,10 @@ export const ZodUserValidation = z.object({
   role: z.enum(["admin", "user"]),
 });
 
+export const ZodUserSignInValidation = z.object({
+  email: z.email(),
+  password: z.string().min(8),
+});
+
 export type TUser = z.infer<typeof ZodUserValidation>;
+export type TUserSignIn = z.infer<typeof ZodUserSignInValidation>;

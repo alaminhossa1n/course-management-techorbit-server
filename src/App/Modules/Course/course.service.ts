@@ -24,6 +24,7 @@ const getCourseById = async (courseId: string) => {
   const course = await CourseModel.findById(courseId);
   return course;
 };
+
 export const CourseService = {
   createCourse,
   deleteCourse,

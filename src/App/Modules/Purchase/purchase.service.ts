@@ -4,6 +4,7 @@ import UserModel from "../User/user.model";
 import PurchaseModel from "./purchase.model";
 import { TPurchase } from "./purchase.validation";
 
+// Purchase course
 const purchaseCourse = async (userId: string, payload: TPurchase) => {
   const isUserExist = await UserModel.findById(userId);
 
@@ -17,13 +18,23 @@ const purchaseCourse = async (userId: string, payload: TPurchase) => {
   }
 
   const result = await PurchaseModel.create({
-    userId: userId,
+    purchasedBy: userId,
     courseId: payload.courseId,
     amount: payload.amount,
   });
   return result;
 };
 
+//get purchased courses
+const getPurchasedCourses = async (userId: string) => {
+  const purchases = await PurchaseModel.find({ purchasedBy: userId }).populate(
+    "courseId"
+  );
+  // .populate("purchasedBy", "-password -__v -createdAt -updatedAt");
+  return purchases;
+};
+
 export const PurchaseService = {
   purchaseCourse,
+  getPurchasedCourses,
 };

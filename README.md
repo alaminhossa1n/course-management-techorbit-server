@@ -64,7 +64,7 @@ Create a `.env` file in the project root with the following variables:
 
 ```bash
 # Server Configuration
-PORT=4000
+PORT=5000
 
 # Database Configuration
 MONGO_URI=mongodb://localhost:27017/techorbit_db
@@ -79,7 +79,7 @@ JWT_SECRET=your-super-secret-jwt-key-here
 npm run dev
 ```
 
-The server will start on `http://localhost:4000`
+The server will start on `http://localhost:5000`
 
 ### 5. Build for production
 

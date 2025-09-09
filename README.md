@@ -48,7 +48,7 @@ A comprehensive course management system built with Express.js, TypeScript, and 
 ### 1. Clone the repository
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/alaminhossa1n/course-management-techorbit-server
 cd course-management-techorbit
 ```
 
@@ -356,30 +356,3 @@ src/
 - **Input Validation**: All inputs are validated using Zod schemas
 - **CORS**: Cross-origin resource sharing enabled
 - **Error Handling**: Comprehensive error handling with custom error classes
-
-## 🚀 Available Scripts
-
-- `npm run dev` - Start development server with hot reloading
-- `npm run build` - Compile TypeScript to JavaScript
-- `npm start` - Start production server
-- `npm test` - Run tests (not implemented yet)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add some amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📝 License
-
-This project is licensed under the ISC License.
-
-## 🆘 Support
-
-If you encounter any issues or have questions, please open an issue in the repository or contact the development team.
-
----
-
-**Happy Coding! 🎉**

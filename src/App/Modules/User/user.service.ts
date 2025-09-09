@@ -36,7 +36,7 @@ const signIn = async (user: TUserSignIn) => {
   }
 
   const jwtPayload = {
-    _id: existingUser?._id,
+    id: existingUser?._id,
     email: existingUser?.email,
     role: existingUser?.role,
   };

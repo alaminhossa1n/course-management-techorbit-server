@@ -42,7 +42,7 @@ const globalErrorHandler = (
     success: false,
     message,
     errorDetails,
-    // stack: err.stack, // Uncomment in dev only
+    stack: err.stack, // Uncomment in dev only
   });
 };
 
